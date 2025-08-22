@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<title>¡Gracias por conectarte!</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body { background: #222; color: #fff; text-align: center; font-family: Arial,sans-serif; }
-  .box { margin: 50px auto; max-width: 420px; background: #282828; border-radius: 22px; padding: 32px 14px 32px 14px; box-shadow:0 2px 16px #0003; }
-  .logo { width: 110px; margin-bottom:18px; border-radius:13px;}
-  .btn-ig {display:inline-block;background:#E1306C;color:#fff;font-size:1.23em;font-weight:bold;border:none;border-radius:13px;padding:15px 42px;margin:22px 0 22px 0;cursor:pointer;box-shadow:0 2px 8px #0002;text-decoration:none;}
-  .btn-ig:hover {background:#c13584;}
-</style>
+  <meta charset="utf-8" />
+  <title>Redireccionando…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Redirección inmediata (fallback si está deshabilitado JS) -->
+  <meta http-equiv="refresh" content="0; url=https://www.instagram.com/1000_articulos/">
+
+  <!-- Evita parpadeo en pantalla -->
+  <style>
+    html,body{height:100%;margin:0;background:#000}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+
+  <script>
+    // Redirección principal (más fiable)
+    (function () {
+      var url = "https://www.instagram.com/1000_articulos/";
+      // use replace para no dejar la página en el historial
+      location.replace(url);
+    })();
+  </script>
 </head>
 <body>
-  <div class="box">
-    <img src="logo1000.jpeg" class="logo" alt="Logo 1000Articulos"><br>
-    <h2>¡Estás conectado!</h2>
-    <p>Gracias por usar nuestro WiFi.<br><br>
-    <a class="btn-ig" href="https://www.instagram.com/1000_articulos/" target="_blank">
-      Seguinos en Instagram
-    </a>
-    </p>
-  </div>
+  <p class="sr-only">
+    Si no sos redirigido automáticamente, abrí
+    <a href="https://www.instagram.com/1000_articulos/">este enlace</a>.
+  </p>
 </body>
 </html>
+
